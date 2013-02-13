@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+						http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+	
+	<bean id="jdbcWeatherDao" class="ee.ttu.weatherapp.dao.impl.JdbcWeatherDao">
+		<property name="dataSource" ref="weatherAppDataSource" />
+	</bean>
+	
+	<bean id="jdbcCityDao" class="ee.ttu.weatherapp.dao.impl.JdbcCityDao">
+		<property name="dataSource" ref="weatherAppDataSource" />
+	</bean>
+	
+	<bean id="propertyConfigurer"
+		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="location" value="/WEB-INF/spring/jdbc/spring-jdbc.properties" />
+	</bean>
+		
+	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" abstract="true" destroy-method="close">
+		<property name="driverClassName" value="${jdbc.driverClassName}" />
+		<property name="initialSize" value="${jdbc.initialSize}" />
+		<property name="maxActive" value="${jdbc.maxActive}" />
+	</bean>
+	
+	<bean id="weatherAppDataSource" class="org.apache.commons.dbcp.BasicDataSource" parent="dataSource">
+		<property name="url" value="${jdbc.weather.url}" />
+		<property name="username" value="${jdbc.weather.username}" />
+		<property name="password" value="${jdbc.weather.password}" />
+	</bean>
+	
+	<bean id="adminDataSource" class="org.apache.commons.dbcp.BasicDataSource" parent="dataSource">
+		<property name="url" value="${jdbc.admin.url}" />
+		<property name="username" value="${jdbc.admin.username}" />
+		<property name="password" value="${jdbc.admin.password}" />
+	</bean>
+	
+</beans>
