@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="WeatherApp" basedir="." default="build">
+	<description>
+		Server application that provides
+		weather information thru web services.
+	</description>
+	
+	<target name="build" description="Build project">
+	
+	</target>
+</project>

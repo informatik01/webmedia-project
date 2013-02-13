@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GetWeatherForecastResponse xmlns="http://ttu.ee/weatherapp/ws/schemas"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://ttu.ee/weatherapp/ws/schemas weather-info.xsd">
+	
+	<WeatherForecast city="Tallinn" date="2012-04-17">
+		<WeatherInfo partOfDay="Night">
+			<WeatherType>Sunny</WeatherType>
+			<MinTemp>5</MinTemp>
+			<MaxTemp>25</MaxTemp>
+			<Wind>5</Wind>
+			<Description>Some description here...</Description>
+		</WeatherInfo>
+		<WeatherInfo partOfDay="Morning">
+			<WeatherType>Rainy</WeatherType>
+			<MinTemp>1</MinTemp>
+			<MaxTemp>3</MaxTemp>
+			<Wind>10</Wind>
+			<Description>Some description here...</Description>
+		</WeatherInfo>
+		<WeatherInfo partOfDay="Afternoon">
+			<WeatherType>Rainy</WeatherType>
+			<MinTemp>1</MinTemp>
+			<MaxTemp>3</MaxTemp>
+			<Wind>10</Wind>
+			<Description>Some description here...</Description>
+		</WeatherInfo>
+		<WeatherInfo partOfDay="Evening">
+			<WeatherType>Rainy</WeatherType>
+			<MinTemp>1</MinTemp>
+			<MaxTemp>3</MaxTemp>
+			<Wind>10</Wind>
+			<Description>Some description here...</Description>
+		</WeatherInfo>
+	</WeatherForecast>
+	
+	<WeatherForecast city="Tallinn" date="2012-04-18">
+		<WeatherInfo partOfDay="Night">
+			<WeatherType>Sunny</WeatherType>
+			<MinTemp>5</MinTemp>
+			<MaxTemp>25</MaxTemp>
+			<Wind>5</Wind>
+			<Description>Some description here...</Description>
+		</WeatherInfo>
+		<WeatherInfo partOfDay="Morning">
+			<WeatherType>Rainy</WeatherType>
+			<MinTemp>1</MinTemp>
+			<MaxTemp>3</MaxTemp>
+			<Wind>10</Wind>
+			<Description>Some description here...</Description>
+		</WeatherInfo>
+		<WeatherInfo partOfDay="Afternoon">
+			<WeatherType>Rainy</WeatherType>
+			<MinTemp>1</MinTemp>
+			<MaxTemp>3</MaxTemp>
+			<Wind>10</Wind>
+			<Description>Some description here...</Description>
+		</WeatherInfo>
+		<WeatherInfo partOfDay="Evening">
+			<WeatherType>Rainy</WeatherType>
+			<MinTemp>1</MinTemp>
+			<MaxTemp>3</MaxTemp>
+			<Wind>10</Wind>
+			<Description>Some description here...</Description>
+		</WeatherInfo>
+	</WeatherForecast>
+	
+</GetWeatherForecastResponse>

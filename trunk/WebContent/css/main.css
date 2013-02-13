@@ -1,0 +1,79 @@
+@CHARSET "UTF-8";
+
+#header {
+	margin-left: 15%;
+	width: 80%;
+	height: 60px;
+	min-width: 900px;
+}
+
+#mainContent {
+	margin-left: 15%;
+	padding: 0;
+	width: 80%;
+	min-width: 900px;
+}
+
+/********** Main Navigation **********/
+#navMenu {
+	margin: 0;
+	padding: 0;
+}
+
+#navMenu ul {
+	margin: 0;
+	padding: 0;
+	line-height: 60px;
+}
+
+#navMenu li {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	float: left;
+	position: relative;
+	background: #69C;
+}
+
+#navMenu ul li a {
+	text-align: center;
+	font-family: "Comic Sans MS", cursive;
+	text-decoration: none;
+	height: 60px;
+	width: 290px;
+	display: table-cell;
+	color: #FFF;
+	border: 1px solid #FFF;
+	text-shadow: 1px 1px 1px #000;
+}
+
+#navMenu ul ul {
+	position: absolute;		/* to display menu items vertically */
+	visibility: hidden;		/* hide menu items */
+	top: 62px;				/* NB! same height as menu links */
+}
+
+#navMenu ul li:hover ul {
+	visibility: visible;
+}
+
+#navMenu li:hover {
+	background: #5B0;
+}
+
+#navMenu a:hover {
+	background: #5B0;
+	background-image: url('../images/arrow.png');
+	background-repeat: no-repeat;
+	background-position: 3px center;
+	background-size: 25px;
+}
+
+/********** end Main Navigation **********/
+
+.clearFloat {		/* to end navMenu, because <li> items were "float: left" */
+	clear: both;	/* now main menu will be contained properly inside navMenu  */
+	margin: 0;
+	padding: 0;
+}
+

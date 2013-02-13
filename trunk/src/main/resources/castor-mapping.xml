@@ -1,0 +1,85 @@
+<?xml version="1.0"?>
+<!DOCTYPE mapping PUBLIC "-//EXOLAB/Castor Mapping DTD Version 1.0//EN"
+                         "http://castor.org/mapping.dtd">
+
+<mapping>
+
+	<class name="ee.ttu.weatherapp.ws.oxm.GetCitiesRequest">
+		<map-to xml="GetCitiesRequest" ns-uri="http://ttu.ee/weatherapp/ws/schemas" />
+	</class>
+
+	<class name="ee.ttu.weatherapp.ws.oxm.GetCitiesResponse">
+		<map-to xml="GetCitiesResponse" ns-uri="http://ttu.ee/weatherapp/ws/schemas" />
+		<field name="cities" collection="arraylist" type="string">
+			<bind-xml name="City" node="element" />
+		</field>
+	</class>
+
+	<class name="ee.ttu.weatherapp.ws.oxm.GetCurrentWeatherRequest">
+		<map-to xml="GetCurrentWeatherRequest" ns-uri="http://ttu.ee/weatherapp/ws/schemas" />
+		<field name="city" type="string">
+			<bind-xml name="City" node="element" />
+		</field>
+	</class>
+
+	<class name="ee.ttu.weatherapp.ws.oxm.GetCurrentWeatherResponse">
+		<map-to xml="GetCurrentWeatherResponse" ns-uri="http://ttu.ee/weatherapp/ws/schemas" />
+		<field name="weatherInfo" type="ee.ttu.weatherapp.domain.WeatherInfo">
+			<bind-xml name="WeatherInfo" node="element" />
+		</field>
+	</class>
+
+	<class name="ee.ttu.weatherapp.ws.oxm.GetWeatherForecastRequest">
+		<map-to xml="GetWeatherForecastRequest" ns-uri="http://ttu.ee/weatherapp/ws/schemas" />
+		<field name="city" type="string">
+			<bind-xml name="City" node="element" />
+		</field>
+		<field name="numberOfDays" type="integer">
+			<bind-xml name="NumberOfDays" node="element" />
+		</field>
+	</class>
+
+	<class name="ee.ttu.weatherapp.ws.oxm.GetWeatherForecastResponse">
+		<map-to xml="GetWeatherForecastResponse" ns-uri="http://ttu.ee/weatherapp/ws/schemas" />
+		<field name="weatherForecast" collection="arraylist" type="ee.ttu.weatherapp.domain.WeatherForecast">
+			<bind-xml name="WeatherForecast" node="element" />
+		</field>
+	</class>
+
+	<class name="ee.ttu.weatherapp.domain.WeatherForecast">
+		<map-to xml="WeatherForecast" ns-uri="http://ttu.ee/weatherapp/ws/schemas" />
+		<field name="city" type="string">
+			<bind-xml name="city" node="attribute" />
+		</field>
+		<field name="date" type="date" handler = "ee.ttu.weatherapp.ws.oxm.CustomDateHandler">
+			<bind-xml name="date" node="attribute" />
+		</field>
+		<field name="weatherInfo" collection="arraylist"
+			type="ee.ttu.weatherapp.domain.WeatherInfo">
+			<bind-xml name="WeatherInfo" node="element" />
+		</field>
+	</class>
+
+	<class name="ee.ttu.weatherapp.domain.WeatherInfo">
+		<map-to xml="WeatherInfo" ns-uri="http://ttu.ee/weatherapp/ws/schemas" />
+		<field name="partOfDay" type="string">
+			<bind-xml name="partOfDay" node="attribute" />
+		</field>
+		<field name="weatherType" type="string">
+			<bind-xml name="WeatherType" node="element" />
+		</field>
+		<field name="minTemp" type="integer">
+			<bind-xml name="MinTemp" node="element" />
+		</field>
+		<field name="maxTemp" type="integer">
+			<bind-xml name="MaxTemp" node="element" />
+		</field>
+		<field name="wind" type="integer">
+			<bind-xml name="Wind" node="element" />
+		</field>
+		<field name="description" type="string">
+			<bind-xml name="Description" node="element" />
+		</field>
+	</class>
+
+</mapping>
