@@ -19,7 +19,8 @@ import ee.ttu.weatherapp.domain.WeatherForecast;
 import ee.ttu.weatherapp.domain.WeatherInfo;
 
 /**
- * @author Levan
+ * Not a unit test.
+ * Just a code for experiments.
  * 
  */
 public class WeatherAppTest {
