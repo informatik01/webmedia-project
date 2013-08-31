@@ -7,9 +7,7 @@ public class CityForm {
 
 	private List<City> cities;
 
-	public CityForm() {
-		
-	}
+	public CityForm() {}
 
 	public CityForm(List<City> cities) {
 		this.cities = cities;
@@ -22,4 +20,5 @@ public class CityForm {
 	public void setCities(List<City> cities) {
 		this.cities = cities;
 	}
+	
 }

@@ -28,7 +28,6 @@
 					<li><a href="../weather/update">Update Weather Data</a></li>
 				</ul>
 			</li>
-			
 		</ul>
 		
 		<br class="clearFloat" />
@@ -41,7 +40,6 @@
 	<h2>Edit list of cities, currently stored in the database.</h2>
 	
 	<form:form modelAttribute="cityForm" method="POST" acceptCharset="UTF-8" >
-		
 		<ol>
 		<c:forEach items="${cityForm.cities}" var="city" varStatus="status">
 				<li>

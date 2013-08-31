@@ -38,16 +38,18 @@
 	</h1>
 	</div>
 	<h2>List of cities, currently stored in the database.</h2>
-
-	<c:if test="${empty cityForm.cities}">
-		<p>There are currently no cities in database.</p>
-	</c:if>
-	<ol>
-		<c:forEach items="${cityForm.cities}" var="city">
-			<li>${city.name}</li>
-		</c:forEach>
-	</ol>
-	
+	<c:choose>
+		<c:when test="${empty cityForm.cities}">
+			<p>There are currently no cities in database.</p>
+		</c:when>
+		<c:otherwise>
+			<ol>
+				<c:forEach items="${cityForm.cities}" var="city">
+					<li>${city.name}</li>
+				</c:forEach>
+			</ol>
+		</c:otherwise>
+	</c:choose>
 	<p>
 		<a href="../j_spring_security_logout">Logout</a>
 	</p>

@@ -10,7 +10,6 @@ public class City {
 	public static Comparator<City> CityComparator = new Comparator<City>() {
 		
 		public int compare(City city1, City city2) {
-			
 			return city1.getName().compareTo(city2.getName());
 		}
 	};
@@ -32,7 +31,7 @@ public class City {
 	}
 	
 	public String toString() {
-		
 		return name;
 	}
+	
 }

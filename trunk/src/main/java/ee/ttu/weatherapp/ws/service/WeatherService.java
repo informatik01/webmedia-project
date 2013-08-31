@@ -11,7 +11,6 @@ public interface WeatherService {
 
 	public WeatherInfo getCurrentWeather(String city);
 
-	public List<WeatherForecast> getWeatherForecast(String city,
-			int numberOfDays);
+	public List<WeatherForecast> getWeatherForecast(String city, int numberOfDays);
 
 }
