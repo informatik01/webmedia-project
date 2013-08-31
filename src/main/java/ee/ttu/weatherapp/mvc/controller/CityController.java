@@ -26,7 +26,6 @@ public class CityController {
 
 	@ModelAttribute("cityForm")
 	public CityForm populateCitiyList() {
-
 		List<City> cities = cityDao.read();
 		Collections.sort(cities, City.CityComparator);
 		CityForm cityForm = new CityForm(cities);
@@ -36,19 +35,16 @@ public class CityController {
 
 	@RequestMapping(value = "cities", method = RequestMethod.GET)
 	public String showCities() {
-
 		return "cities";
 	}
 
 	@RequestMapping(value = "cities/update", method = RequestMethod.GET)
 	public String editCity(Model model) {
-
 		return "cities_update";
 	}
 
 	@RequestMapping(value = "cities/update", method = RequestMethod.POST)
 	public String updateCity(@ModelAttribute("cityForm") CityForm cityForm, HttpServletRequest request) {
-
 		String[] checkedCitiesIds = request.getParameterValues("checkedCities");
 
 		if (checkedCitiesIds != null) {
@@ -73,13 +69,11 @@ public class CityController {
 
 	@RequestMapping(value = "cities/new", method = RequestMethod.GET)
 	public String insertCity() {
-		
 		return "cities_insert";
 	}
 	
 	@RequestMapping(value = "cities/new", method = RequestMethod.POST)
 	public String addCity(HttpServletRequest request) {
-
 		String[] newCities = null;
 		String citiesString = request.getParameter("new_cities");
 		if (citiesString != null) {
@@ -91,20 +85,20 @@ public class CityController {
 		
 		List<City> oldCities = cityDao.read();
 		List<String> added = new ArrayList<String>();
-		boolean isAlready = false;
+		boolean existsAlready = false;
 		if (oldCities != null) {
 			for (String newCity: newCities) {
 				for (City oldCity: oldCities) {
 					if (newCity.equalsIgnoreCase(oldCity.getName())) {
-						isAlready = true;
+						existsAlready = true;
 						break;
 					}
 				}
 				
-				if (isAlready == false && newCity.matches("(\\p{L}+\\s*-?\\s*)+")) {
+				if (existsAlready == false && newCity.matches("(\\p{L}+\\s*-?\\s*)+")) {
 					added.add(newCity);
 				} else {
-					isAlready = false;
+					existsAlready = false;
 				}
 			}
 			
@@ -124,4 +118,5 @@ public class CityController {
 		cityDao.insert(addedCities);
 		return "redirect:../cities";
 	}
+	
 }

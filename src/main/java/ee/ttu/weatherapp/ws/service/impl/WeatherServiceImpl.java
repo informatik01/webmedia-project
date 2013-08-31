@@ -63,8 +63,7 @@ public class WeatherServiceImpl implements WeatherService {
 	}
 
 	@Override
-	public List<WeatherForecast> getWeatherForecast(String city,
-			int numberOfDays) {
+	public List<WeatherForecast> getWeatherForecast(String city, int numberOfDays) {
 
 		Calendar cal = Calendar.getInstance();
 		Date startDate = cal.getTime();

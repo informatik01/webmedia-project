@@ -9,13 +9,12 @@ public class WeatherController {
 
 	@RequestMapping(value = "/weather/new", method = RequestMethod.GET)
 	public String insertWeather() {
-		
 		return "weather_insert";
 	}
 	
 	@RequestMapping(value = "/weather/update", method = RequestMethod.GET)
 	public String updateWeather() {
-		
 		return "weather_update";
 	}
+	
 }
