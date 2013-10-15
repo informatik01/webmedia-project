@@ -25,7 +25,7 @@ public class CityController {
 	private JdbcCityDao cityDao;
 
 	@ModelAttribute("cityForm")
-	public CityForm populateCitiyList() {
+	public CityForm populateCityList() {
 		List<City> cities = cityDao.read();
 		Collections.sort(cities, City.CityComparator);
 		CityForm cityForm = new CityForm(cities);
