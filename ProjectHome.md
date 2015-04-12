@@ -1,0 +1,11 @@
+## <i>WeatherApp</i> - a Spring project for Webmedia ([Nortal](http://nortal.com)). ##
+The goal of this test exercise was to build Spring based server application, that allows to query weather related information using web services and SOAP protocol. The web application also has a web interface for the administrative purposes.<br />
+The original description of the test exercise can be found in the [Downloads](http://code.google.com/p/webmedia-project/downloads/list) section.
+
+---
+
+### Languages, technologies, frameworks and other solutions used: ###
+[Java SE 7](http://docs.oracle.com/javase/), [Java EE 6](http://docs.oracle.com/javaee/) ([Servlet 3.0](http://jcp.org/en/jsr/detail?id=315), [JSP 2.2](http://jcp.org/aboutJava/communityprocess/mrel/jsr245/index.html), [JSTL 1.2](http://download.oracle.com/otndocs/jcp/jstl-1.2-mrel2-eval-oth-JSpec/), [Expression Language 2.2](http://download.oracle.com/otndocs/jcp/expression_language-2.2-mrel-eval-oth-JSpec/)), [Spring Framework 3.1.2](http://www.springsource.org/spring-framework) ([Spring MVC](http://static.springsource.org/spring/docs/current/spring-framework-reference/html/mvc.html), [Spring JDBC](http://static.springsource.org/spring/docs/current/spring-framework-reference/html/jdbc.html)), [Spring Security 3.1.2](http://www.springsource.org/spring-security), [Spring Web Services 2.1.0](http://www.springsource.org/spring-web-services), [SQL](http://www.iso.org/iso/home/store/catalogue_tc/catalogue_detail.htm?csnumber=53681), [JDBC 4.1](http://jcp.org/aboutJava/communityprocess/mrel/jsr221/index.html), [Apache Commons DBCP 1.4](http://commons.apache.org/dbcp/), [XML 1.0](http://www.w3.org/TR/xml/), [XML Schema 1.0](http://www.w3.org/TR/xmlschema-1/), [Castor 1.3.2](http://castor.codehaus.org/), [Apache log4j 1.2](http://logging.apache.org/log4j/1.2/), [Apache Ant 1.8.4](http://ant.apache.org/), [HTML 5](http://www.whatwg.org/specs/web-apps/current-work/multipage/), [CSS 2.1](http://www.w3.org/TR/2011/REC-CSS2-20110607/).
+
+### Servers used: ###
+[Apache Tomcat 7](http://tomcat.apache.org/), [PostgreSQL 9.1](http://www.postgresql.org/)
